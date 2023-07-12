@@ -1,0 +1,10 @@
+{
+	"compilerOptions": {
+		"sourceMap" : true, // for debugging
+		"esModuleInterop": true,
+		"outDir": "dist",
+		"baseUrl": ".",
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true
+	}
+}
