@@ -16,10 +16,11 @@ const port = process.env.PORT;
 const app: Express = express();
 app.use(bodyParser.json());  // BodyParser отвечает за распознование тела запроса
 app.use(httpContext.middleware);
+
 useExpressServer(app, {
 	controllers: [UserController],
 	middlewares: [GlobalErrorHandlers],
-	defaultErrorHandler: false
+	defaultErrorHandler: false // Введен собственный обработчик ошибок (глобальный)
 })
 
 // app.use((req, res, next) => {
