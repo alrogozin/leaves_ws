@@ -20,7 +20,7 @@ app.use(httpContext.middleware);
 useExpressServer(app, {
 	controllers: [UserController],
 	middlewares: [GlobalErrorHandlers],
-	defaultErrorHandler: false // Введен собственный обработчик ошибок (глобальный)
+	defaultErrorHandler: false // Введен собственный обработчик ошибок (глобальный).
 })
 
 // app.use((req, res, next) => {
