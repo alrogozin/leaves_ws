@@ -12,6 +12,7 @@ import {
 import 'reflect-metadata';
 import { LoggingAfter, LoggingBefore } from '../middleware/middleware';
 import { Info } from '../model/info';
+import { OraMng } from '../database/oramng';
 
 @Controller()
 
@@ -28,6 +29,8 @@ import { Info } from '../model/info';
 export class UserController {
   @Get(`/about`)
   getAbout() {
+    const orcl = new OraMng();
+    orcl.test();
     console.log('About Leaves_WS application');
     return `About Leaves_WS application. Нужно описание вызовов и пр.`;
   }
