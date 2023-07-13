@@ -1,9 +1,7 @@
 import { IsDefined, IsNotEmpty } from 'class-validator';
 
-export class Info {
-  @IsDefined()
-  country: string;
+export class DeclsByCnu {
   @IsDefined()
   @IsNotEmpty()
-  city: string;
+  cnu_id: number;
 }
