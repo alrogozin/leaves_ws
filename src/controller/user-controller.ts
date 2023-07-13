@@ -40,11 +40,14 @@ export class UserController {
     return `This action returns user #${id}`;
   }
 
-  @Post('/decls_by_cnu/:id')
+  @Post('/decls_by_cnu')
   @OnUndefined(204)
-  async postDeclsByCnuId(@Param('id') id: number, @Body() info: DeclsByCnu) {
+  // async postDeclsByCnuId(@Param('id') id: number, @Body() info: DeclsByCnu) {
+  async postDeclsByCnuId(@Body() info: DeclsByCnu) {
+    // console.log(`cnu_id !`);
+    console.log(`cnu_id ${info.cnu_id}`);
     const orcl = new OraMng();
-    return await orcl.decls_by_cnu_id(id);
+    return await orcl.decls_by_cnu_id(info.cnu_id);
   }
 
   @Post('/users/:id')

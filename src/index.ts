@@ -22,7 +22,6 @@ useExpressServer(app, {
 	middlewares: [GlobalErrorHandlers],
 	defaultErrorHandler: false // Введен собственный обработчик ошибок (глобальный).
 })
-
 // app.use((req, res, next) => {
 // 	httpContext.ns.bindEmitter(req);
 // 	httpContext.ns.bindEmitter(res);
