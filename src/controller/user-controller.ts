@@ -31,9 +31,7 @@ export class UserController {
   @Get(`/about`)
   async getAbout() {
     const orcl = new OraMng();
-    let res = await orcl.test();
-    // console.log('About Leaves_WS application');
-    return res;
+    return  await orcl.test();
   }
 
   @Get('/users/:id')
@@ -46,9 +44,7 @@ export class UserController {
   @OnUndefined(204)
   async postDeclsByCnuId(@Param('id') id: number, @Body() info: DeclsByCnu) {
     const orcl = new OraMng();
-    let res = await orcl.decls_by_cnu_id(id);
-    // console.log(res);
-    return res;
+    return await orcl.decls_by_cnu_id(id);
   }
 
   @Post('/users/:id')
